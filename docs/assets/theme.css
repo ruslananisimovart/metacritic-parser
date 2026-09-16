@@ -1,0 +1,77 @@
+/* Токены светлой и тёмной темы, перенесены из макета Claude Design без изменений значений.
+   Тема задаётся атрибутом data-omtheme на <html>, выбор хранится в localStorage.
+   --shadow-menu добавлен к макету: в светлой теме чёрная тень меню выглядела грязным пятном.
+   --card-shadow и --card-shadow-sm из нового макета: у карточек тени вместо рамок. */
+:root{
+  --bg-page:#FFFFFF; --surface:#FFFFFF; --surface-2:#F7FAFF; --inset:#F3F7FC; --inset-2:#EFF4FA;
+  --btn-soft:#E8F1FF; --scroll:#CBD6E8; --skel:#EDF2FA; --tip-bg:#FFFFFF;
+  --grad-page:radial-gradient(1100px 560px at 80% -14%, #E4EFFF 0%, rgba(228,239,255,0) 60%),#F3F7FC;
+  --grad-sidebar:linear-gradient(180deg,#EAF3FF 0%,#F7FBFF 58%,#FFFFFF 100%);
+  --grad-card:linear-gradient(180deg,#FFFFFF 0%,#F7FAFF 100%);
+  --grad-hero:radial-gradient(620px 420px at 94% -34%, #DEEBFF 0%, rgba(222,235,255,0) 66%),linear-gradient(120deg,#E7F1FF 0%,#FBFDFF 68%);
+  --grad-hero2:radial-gradient(560px 400px at 6% -24%, #E5EEFF 0%, rgba(229,238,255,0) 64%),linear-gradient(120deg,#E8F1FF 0%,#FBFDFF 74%);
+  --grad-violet:radial-gradient(480px 380px at 16% -14%, #E9E3FF 0%, rgba(233,227,255,0) 66%),linear-gradient(160deg,#EFEBFF 0%,#FBFAFF 74%);
+  --hatch7:repeating-linear-gradient(135deg,#E9EFF9 0 7px,#F4F7FB 7px 14px);
+  --hatch8:repeating-linear-gradient(135deg,#E9EFF9 0 8px,#F4F7FB 8px 16px);
+  --hatch9:repeating-linear-gradient(135deg,#E9EFF9 0 9px,#F4F7FB 9px 18px);
+  --shimmer:linear-gradient(90deg,#EDF2FA 0%,#F8FBFF 50%,#EDF2FA 100%);
+  --grad-vram:linear-gradient(90deg,#6E5BFF,#2B7BFF); --grad-bar:linear-gradient(90deg,#1F6BFF,#4A9BFF);
+  --t1:#10233F; --t2:#1B3358; --t3:#33486B; --t4:#3E5273; --t5:#46597A;
+  --t6:#5B6C89; --t7:#64758F; --t8:#6E7F9B; --t9:#7887A2; --t10:#8C9AB4; --tv:#6A6F9B;
+  --acc:#1F6BFF; --acc-2:#2B7BFF; --acc-soft:#1F6BFF; --acc-line:#3D90FF; --acc-deep:rgba(9,32,78,.46);
+  --violet:#5A4BD8; --green:#0F9A63; --green-live:#12A150; --yellow:#C07C10; --red:#D1373E;
+  --grey:#D3DCEB; --on-score:#FFFFFF; --logo-games:#FFFFFF; --logo-sky-a:#4FD2FF; --logo-sky-b:#22B2F5;
+  --sb-bg:linear-gradient(168deg,#0A2A5E 0%,#123C86 20%,#3B2FCB 46%,#5B34D6 60%,#2455C9 80%,#1668C9 100%);
+  --sb-t1:#FFFFFF; --sb-t2:rgba(255,255,255,.88); --sb-muted:rgba(255,255,255,.82);
+  --sb-line:rgba(255,255,255,.2); --sb-veil:rgba(255,255,255,.12); --sb-inset:rgba(255,255,255,.1);
+  --sb-active:linear-gradient(90deg, rgba(255,255,255,.26) 0%, rgba(255,255,255,.14) 52%, rgba(255,255,255,0) 100%);
+  --sb-on:#FFFFFF; --sb-chip:rgba(255,255,255,.92); --sb-chip-fg:#1F5FE0;
+  /* плашка "на паузе": на синем фоне полупрозрачная подложка терялась, поэтому плотная жёлтая с тёмным текстом */
+  --sb-pill-bg:rgba(255,196,77,.94); --sb-pill-fg:#3B2A00;
+  --plat-pc:#4A5B78; --plat-ps:#0A5BC4; --plat-xb:#0C7F4C; --plat-ns:#C4343A; --plat-def:#4A5B78;
+  --veil-05:rgba(16,35,63,.05); --veil-06:rgba(16,35,63,.06); --veil-07:rgba(16,35,63,.07);
+  --veil-08:rgba(16,35,63,.08); --veil-09:rgba(16,35,63,.09); --veil-10:rgba(16,35,63,.10);
+  --veil-11:rgba(16,35,63,.11); --veil-12:rgba(16,35,63,.12); --veil-13:rgba(16,35,63,.13);
+  --veil-14:rgba(16,35,63,.14); --veil-15:rgba(16,35,63,.15); --veil-16:rgba(16,35,63,.16);
+  --veil-17:rgba(16,35,63,.17); --veil-18:rgba(16,35,63,.18); --veil-38:rgba(16,35,63,.38);
+  --veil-90:rgba(255,255,255,.9);
+  --shadow-menu:0 18px 40px rgba(16,35,63,.18);
+  --card-shadow:0 1px 2px rgba(16,35,63,.05), 0 10px 28px -12px rgba(16,35,63,.18);
+  --card-shadow-sm:0 1px 2px rgba(16,35,63,.04), 0 4px 14px -8px rgba(16,35,63,.14);
+}
+[data-omtheme="dark"]{
+  --bg-page:#070B15; --surface:#0F1A2C; --surface-2:#0C1526; --inset:#0A1220; --inset-2:#0A121F;
+  --btn-soft:#12203A; --scroll:#1D2843; --skel:#101B30; --tip-bg:#16233D;
+  --grad-page:radial-gradient(1100px 720px at 86% -16%, rgba(42,112,215,.20) 0%, rgba(42,112,215,0) 62%),radial-gradient(820px 700px at 24% 44%, rgba(74,90,190,.10) 0%, rgba(74,90,190,0) 64%),linear-gradient(165deg,#08101F 0%,#070D18 58%,#080E1A 100%);
+  --grad-sidebar:radial-gradient(440px 340px at 12% 2%, rgba(42,112,215,.14) 0%, rgba(42,112,215,0) 66%),radial-gradient(480px 440px at 92% 88%, rgba(70,86,180,.12) 0%, rgba(70,86,180,0) 68%),linear-gradient(180deg,#0A1122 0%,#080E1B 58%,#070C16 100%);
+  --grad-card:linear-gradient(150deg,#132038 0%,#101A2B 54%,#0E1725 100%);
+  --grad-hero:radial-gradient(620px 420px at 92% -30%, rgba(42,112,215,.20) 0%, rgba(42,112,215,0) 64%),linear-gradient(118deg,#142242 0%,#0F1A30 46%,#0B1320 100%);
+  --grad-hero2:radial-gradient(560px 400px at 6% -20%, rgba(74,96,200,.18) 0%, rgba(74,96,200,0) 62%),linear-gradient(120deg,#142242 0%,#0E1930 52%,#0B1320 100%);
+  --grad-violet:radial-gradient(480px 380px at 16% -10%, rgba(104,92,225,.22) 0%, rgba(104,92,225,0) 64%),linear-gradient(160deg,#151B3C 0%,#101830 50%,#0B1320 100%);
+  --hatch7:repeating-linear-gradient(135deg,#152039 0 7px,#0E1626 7px 14px);
+  --hatch8:repeating-linear-gradient(135deg,#152039 0 8px,#0E1626 8px 16px);
+  --hatch9:repeating-linear-gradient(135deg,#131C30 0 9px,#0E1626 9px 18px);
+  --shimmer:linear-gradient(90deg,#0F1A2E 0%,#16233C 50%,#0F1A2E 100%);
+  --grad-vram:linear-gradient(90deg,#8A60FF 0%,#3BA6FF 62%,#3DD0FF 100%); --grad-bar:linear-gradient(90deg,#2E86FF 0%,#5AAEFF 55%,#3DD0FF 100%);
+  --t1:#E9F0FA; --t2:#DCE5F5; --t3:#C6D3EA; --t4:#C6CFDF; --t5:#B9C6DC;
+  --t6:#A9B8D0; --t7:#9FAEC9; --t8:#94A5C2; --t9:#8B9BB8; --t10:#67769A; --tv:#8A93C4;
+  --acc:#3BA6FF; --acc-2:#5AAEFF; --acc-soft:#8FC6FF; --acc-line:#3D90FF; --acc-deep:rgba(9,32,78,.46);
+  --violet:#B3A7FF; --green:#3ECF8E; --green-live:#34D058; --yellow:#F5B33C; --red:#F2555A;
+  --grey:#25324D; --on-score:#08111F; --logo-games:#EAF2FF; --logo-sky-a:#5AAEFF; --logo-sky-b:#1F6BFF;
+  --sb-bg:linear-gradient(172deg,#0A1122 0%,#0B1428 34%,#0C1330 62%,#0A1028 84%,#080D1C 100%);
+  --sb-t1:#E9F0FA; --sb-t2:#C6CFDF; --sb-muted:#67769A;
+  --sb-line:rgba(120,150,210,.14); --sb-veil:rgba(255,255,255,.05); --sb-inset:#0A1220;
+  --sb-active:linear-gradient(94deg, #2B74E0 0%, #2A69D6 28%, #2E59C4 54%, #33499E 76%, rgba(34,46,96,.5) 100%);
+  --sb-on:#FFFFFF; --sb-chip:#0D1729; --sb-chip-fg:#3DD0FF;
+  --sb-pill-bg:rgba(245,179,60,.16); --sb-pill-fg:#F5B33C;
+  --plat-pc:#D6DEEC; --plat-ps:#8FBEFF; --plat-xb:#7FE0A4; --plat-ns:#FF9A9A; --plat-def:#B6C4DB;
+  --veil-05:rgba(255,255,255,.04); --veil-06:rgba(255,255,255,.05); --veil-07:rgba(255,255,255,.06);
+  --veil-08:rgba(255,255,255,.07); --veil-09:rgba(255,255,255,.08); --veil-10:rgba(255,255,255,.09);
+  --veil-11:rgba(255,255,255,.1); --veil-12:rgba(120,150,210,.16); --veil-13:rgba(255,255,255,.12);
+  --veil-14:rgba(120,150,210,.18); --veil-15:rgba(255,255,255,.14); --veil-16:rgba(120,150,210,.2);
+  --veil-17:rgba(120,150,210,.22); --veil-18:rgba(120,150,210,.24); --veil-38:rgba(4,8,16,.62);
+  --veil-90:rgba(6,10,20,.85);
+  --shadow-menu:0 18px 40px rgba(0,0,0,.5);
+  --card-shadow:0 1px 2px rgba(0,0,0,.45), 0 16px 36px -16px rgba(0,0,0,.75);
+  --card-shadow-sm:0 1px 2px rgba(0,0,0,.4), 0 6px 18px -10px rgba(0,0,0,.6);
+}

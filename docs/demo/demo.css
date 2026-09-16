@@ -1,0 +1,28 @@
+/* Панель плеера демонстрации: те же токены темы, что у интерфейса */
+.main{padding-bottom:120px;}
+.demo-bar{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:80;width:min(720px,calc(100vw - 32px));
+  display:flex;align-items:center;gap:14px;padding:10px 12px 10px 10px;border-radius:18px;background:var(--surface);
+  box-shadow:var(--shadow-menu);font-family:var(--font-body);color:var(--t1);}
+.demo-btn{flex:0 0 40px;width:40px;height:40px;border:none;border-radius:12px;cursor:pointer;display:flex;align-items:center;
+  justify-content:center;background:var(--acc);color:#fff;transition:filter .15s;}
+.demo-btn:hover{filter:brightness(1.08);}
+.demo-mid{flex:1;min-width:0;display:flex;flex-direction:column;gap:8px;}
+.demo-top{display:flex;align-items:center;gap:10px;min-width:0;font-size:12.5px;line-height:1.2;}
+.demo-label{font-weight:700;color:var(--t2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.demo-state{padding:3px 8px;border-radius:7px;background:var(--inset);color:var(--t7);font-weight:600;font-size:12px;white-space:nowrap;}
+.demo-state.is-run{background:var(--btn-soft);color:var(--acc);}
+.demo-state.is-lp{background:var(--btn-soft);color:var(--violet);}
+.demo-time{margin-left:auto;font-family:var(--font-mono);font-weight:500;font-size:12.5px;color:var(--t7);white-space:nowrap;}
+.demo-track{position:relative;height:8px;border-radius:5px;background:var(--inset);cursor:pointer;touch-action:none;}
+.demo-track::before{content:"";position:absolute;inset:-8px 0;}
+.demo-fill{position:absolute;left:0;top:0;bottom:0;border-radius:5px;background:var(--acc);pointer-events:none;}
+.demo-mark{position:absolute;top:-3px;width:3px;height:14px;margin-left:-1.5px;border-radius:2px;background:var(--yellow);pointer-events:none;}
+.demo-speeds{display:flex;gap:4px;padding:3px;border-radius:12px;background:var(--inset);}
+.demo-speed{border:none;background:transparent;color:var(--t6);font-family:var(--font-mono);font-weight:600;font-size:12.5px;
+  height:32px;min-width:40px;padding:0 8px;border-radius:9px;cursor:pointer;}
+.demo-speed.is-on{background:var(--surface);color:var(--acc);box-shadow:var(--card-shadow-sm);}
+.demo-note{z-index:95;bottom:92px;color:var(--acc);}
+@media (max-width:600px){
+  .demo-label{display:none;}
+  .demo-speed{min-width:34px;padding:0 6px;}
+}
