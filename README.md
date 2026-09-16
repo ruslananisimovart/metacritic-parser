@@ -4,7 +4,9 @@
 
 Тестовое задание Skytec, вакансия AI Automation Engineer.
 
-Демо без установки: `https://<аккаунт>.github.io/<репозиторий>/` (интерфейс проигрывает запись настоящей работы сервиса: три прогона, Whisper, летсплеи).
+- Демо без установки: https://ruslananisimovart.github.io/metacritic-parser/ (интерфейс проигрывает запись настоящей работы сервиса: три прогона, Whisper, летсплеи; внизу плеер с перемоткой и скоростью).
+- Репозиторий: https://github.com/ruslananisimovart/metacritic-parser
+- Подробная документация: [DOCUMENTATION.md](https://github.com/ruslananisimovart/metacritic-parser/blob/main/DOCUMENTATION.md)
 
 ## Что сверх задания
 
@@ -23,6 +25,8 @@
 Нужен Python 3.12. Для летсплеев видеокарта NVIDIA с CUDA 12, без неё `LETSPLAY_ENABLED=false`.
 
 ```
+git clone https://github.com/ruslananisimovart/metacritic-parser.git
+cd metacritic-parser
 pip install -r requirements.txt
 cp .env.example .env        # впишите ключ KIE_API_KEY_1 или выберите LLM_PROVIDER=local
 ```
@@ -32,4 +36,4 @@ cp .env.example .env        # впишите ключ KIE_API_KEY_1 или вы�
 
 Интерфейс: http://127.0.0.1:8000/, API: http://127.0.0.1:8000/docs. База, логи и хранилище создаются в папке проекта при первом запуске.
 
-Настройки, API, консольные команды и устройство: [DOCUMENTATION.md](DOCUMENTATION.md).
+Настройки, API, консольные команды и устройство: [DOCUMENTATION.md](DOCUMENTATION.md). Демо в папке [docs](docs) собрано из записи работы сервиса и публикуется через GitHub Pages.
