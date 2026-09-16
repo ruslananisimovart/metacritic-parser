@@ -1,0 +1,15 @@
+fastapi==0.139.0
+uvicorn==0.51.0
+httpx==0.28.1
+pydantic==2.13.4
+python-dotenv==1.2.2
+tzdata==2026.3
+
+# летсплеи YouTube (дополнительная часть 1)
+faster-whisper==1.2.1
+yt-dlp[default,deno]==2026.8.19
+youtube-transcript-api==1.2.4
+# cookies YouTube из профиля Chrome сервиса: управление браузером по протоколу DevTools
+websocket-client==1.9.0
+# CTranslate2 на Windows не находит cuBLAS сам, DLL берутся из этого пакета
+nvidia-cublas-cu12==12.9.2.10 ; sys_platform == "win32"

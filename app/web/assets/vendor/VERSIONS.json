@@ -1,0 +1,47 @@
+{
+ "preact": {
+  "version": "10.29.8",
+  "integrity": "sha512-ej2aVZ+vZ8WO7tvlQWRM9N63A0KzF9q4mWJfDUHgYaIofWY9hu74QdnQrjoPMmZi2/nZ5gN0bJCQF49xQqx09Q==",
+  "files": [
+   "preact.module.js",
+   "hooks.module.js",
+   "preact.LICENSE"
+  ]
+ },
+ "htm": {
+  "version": "3.1.1",
+  "integrity": "sha512-983Vyg8NwUE7JkZ6NmOqpCZ+sh1bKv2iYTlUkzlWmA5JD2acKoxd4KVxbMmxX/85mtfdnDmTFoNKcg5DGAvxNQ==",
+  "files": [
+   "htm.module.js",
+   "htm.LICENSE"
+  ]
+ },
+ "fonts": {
+  "faces": 23,
+  "files": [
+   "ibm-plex-mono-normal-400-cyrillic-ext.woff2",
+   "ibm-plex-mono-normal-400-cyrillic.woff2",
+   "ibm-plex-mono-normal-400-latin-ext.woff2",
+   "ibm-plex-mono-normal-400-latin.woff2",
+   "ibm-plex-mono-normal-500-cyrillic-ext.woff2",
+   "ibm-plex-mono-normal-500-cyrillic.woff2",
+   "ibm-plex-mono-normal-500-latin-ext.woff2",
+   "ibm-plex-mono-normal-500-latin.woff2",
+   "ibm-plex-mono-normal-600-cyrillic-ext.woff2",
+   "ibm-plex-mono-normal-600-cyrillic.woff2",
+   "ibm-plex-mono-normal-600-latin-ext.woff2",
+   "ibm-plex-mono-normal-600-latin.woff2",
+   "inter-normal-500-600-cyrillic-ext.woff2",
+   "inter-normal-500-600-cyrillic.woff2",
+   "inter-normal-500-600-latin-ext.woff2",
+   "inter-normal-500-600-latin.woff2",
+   "onest-normal-500-900-cyrillic-ext.woff2",
+   "onest-normal-500-900-cyrillic.woff2",
+   "onest-normal-500-900-latin-ext.woff2",
+   "onest-normal-500-900-latin.woff2",
+   "plus-jakarta-sans-normal-300-800-cyrillic-ext.woff2",
+   "plus-jakarta-sans-normal-300-800-latin-ext.woff2",
+   "plus-jakarta-sans-normal-300-800-latin.woff2"
+  ]
+ }
+}
